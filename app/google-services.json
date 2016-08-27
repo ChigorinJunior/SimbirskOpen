@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "612057274065",
+    "firebase_url": "https://simbirskopen-7074c.firebaseio.com",
+    "project_id": "simbirskopen-7074c",
+    "storage_bucket": "simbirskopen-7074c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612057274065:android:a4236a20977f130f",
+        "android_client_info": {
+          "package_name": "ru.chigorinjunior.simbirskopen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612057274065-194mcpgccls83v76lg82l7f4knhp4bbi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb3ODWylFO9Ju0wJyDjlmNx_KZK7UTdlE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
