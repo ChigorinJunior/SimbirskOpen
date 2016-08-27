@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SimbirskOpen</string>
+    <string name="schedule">Расписание</string>
+    <string name="results">Результаты</string>
 </resources>
