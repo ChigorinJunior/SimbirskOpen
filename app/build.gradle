@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
 
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.1"
     defaultConfig {
         applicationId "ru.chigorinjunior.simbirskopen"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -27,4 +28,15 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.1.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
     testCompile 'junit:junit:4.12'
+
+    // UI
+    compile 'com.android.support:recyclerview-v7:24.1.1'
+    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+
+    compile 'com.jakewharton:butterknife:8.3.0'
+    apt 'com.jakewharton:butterknife-compiler:8.3.0'
+
+    // Firebase
+    compile 'com.firebase:firebase-client-android:2.5.2+'
+    compile 'com.firebaseui:firebase-ui:0.3.1'
 }
