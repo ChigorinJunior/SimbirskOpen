@@ -6,7 +6,7 @@
         android:title="@string/schedule" />
 
     <item
-        android:id="@+id/bottom_bar_map_item"
+        android:id="@+id/bottom_bar_results_item"
         android:icon="@drawable/ic_trending_up_white_24dp"
         android:title="@string/results" />
 </menu>
