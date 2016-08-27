@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/item_background"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingLeft="2dp"
+                android:paddingTop="2dp"
+                android:background="#ffffff"
+                android:orientation="horizontal">
+
+    <View
+        android:id="@+id/color_indicator"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/time_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/color_indicator"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        tools:text="10:00 - 11:00"/>
+
+    <TextView
+        android:id="@+id/caption_text_vew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/color_indicator"
+        android:layout_below="@id/time_text_view"
+        tools:text="Турнир по «Что? Где? Когда?». Туры 1, 2 (редактор: Павел Солахян)"/>
+
+</RelativeLayout>

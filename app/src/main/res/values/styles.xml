@@ -8,4 +8,15 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="PagerStyle">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="pstsShouldExpand">true</item>
+        <item name="pstsIndicatorColor">@color/colorAccent</item>
+        <item name="pstsDividerColor">@android:color/transparent</item>
+        <item name="pstsIndicatorHeight">2dp</item>
+        <item name="pstsTextAllCaps">false</item>
+    </style>
+
 </resources>
