@@ -1,13 +1,14 @@
 package ru.chigorinjunior.simbirskopen.ui.schedule;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import ru.chigorinjunior.simbirskopen.R;
 import ru.chigorinjunior.simbirskopen.domain.Day;
 import ru.chigorinjunior.simbirskopen.domain.Item;
@@ -18,7 +19,7 @@ public class DayAdapter extends RecyclerView.Adapter<DayAdapter.DayViewHolder> {
     private Day mDay;
     private Context mContext;
 
-    public DayAdapter(Context context, @NonNull Day day) {
+    public DayAdapter(Context context, Day day) {
         mContext = context;
         mDay = day;
     }
@@ -40,18 +41,18 @@ public class DayAdapter extends RecyclerView.Adapter<DayAdapter.DayViewHolder> {
     }
 
     class DayViewHolder extends RecyclerView.ViewHolder {
+        @BindView(R.id.time_text_view)
         TextView mTimeTextView;
+
+        @BindView(R.id.caption_text_vew)
         TextView mCaptionTextView;
-        View mItemBackground;
+
+        @BindView(R.id.color_indicator)
         View mColorIndicator;
 
         public DayViewHolder(View itemView) {
             super(itemView);
-
-            mTimeTextView = (TextView) itemView.findViewById(R.id.time_text_view);
-            mCaptionTextView = (TextView) itemView.findViewById(R.id.caption_text_vew);
-            mItemBackground = itemView.findViewById(R.id.item_background);
-            mColorIndicator = itemView.findViewById(R.id.color_indicator);
+            ButterKnife.bind(this, itemView);
         }
 
         public void init(Item item) {

@@ -1,41 +1,28 @@
 package ru.chigorinjunior.simbirskopen.ui.schedule;
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import ru.chigorinjunior.simbirskopen.R;
 import ru.chigorinjunior.simbirskopen.domain.Day;
+import ru.chigorinjunior.simbirskopen.ui.base.BaseFragment;
 
-public class DayFragment extends Fragment {
+public class DayFragment extends BaseFragment {
     public static final String DAY_ARG = "day_arg";
 
     @BindView(R.id.day_recycler)
     RecyclerView mRecyclerView;
 
-    Day mDay;
-
-    private DayAdapter mDayAdapter;
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_day, container, false);
-        ButterKnife.bind(this, view);
-        initDay();
-        return view;
+    protected int getLayoutId() {
+        return R.layout.fragment_day;
     }
 
-    public void initDay() {
-        mDay = getArguments().getParcelable(DAY_ARG);
-        mDayAdapter = new DayAdapter(getActivity(), mDay);
+    @Override
+    protected void init() {
+        DayAdapter dayAdapter = new DayAdapter(getActivity(), (Day) getArguments().getParcelable(DAY_ARG));
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        mRecyclerView.setAdapter(mDayAdapter);
+        mRecyclerView.setAdapter(dayAdapter);
     }
 }
